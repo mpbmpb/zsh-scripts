@@ -1,0 +1,71 @@
+[user]
+	name = mpbmpb
+	email = markkeyster@gmail.com
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[core]
+	pager = diff-so-fancy 
+[interactive]
+	diffFilter = diff-so-fancy --patch 
+[color]
+	ui = auto
+	branch = always
+	diff = always
+	interactive = always
+	status = always
+	grep = always
+	pager = true
+	decorate = always
+	showbranch = always
+	advice = 214
+	hint = 201
+[color "branch"]
+	current = yellow black
+	local = yellow
+	remote = magenta
+[color "status"]
+	added = green
+	modified = yellow
+	changed = magenta
+	unmerged = red
+	localBranch = cyan
+	branch = cyan
+	remoteBranch = 30
+	header = 37
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = cyan bold
+	old = red
+	new = green
+	whitespace = black white
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[alias]
+	dif = "!git diff -- . ':^**/Migrations/*' | diff-so-fancy"
+	difp = "!git diff | diff-so-fancy | less --tabs=4 -RF"
+	# grep on filename
+	find = "!git ls-files | grep -i"
+	# search entire local repository for string
+	gr = grep -Ii
+	# colored log, short & long
+	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%C(cyan)\\ [%an]" --decorate --date=relative
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [a:%an,c:%cn]" --decorate --numstat
+	lgs = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lgl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	# for specific commit
+    logc  = "!f() { git ll "$1"^.."$1"; }; f"
+	diffc  = "!f() { git diff "$1"^.."$1" | diff-so-fancy | less --tabs=4 -RF ; }; f"
+	# list git aliases
+	alias = "!git config -l | grep alias | cut -c 7-"
+[gui]
+	diffopts = --word-diff=color
+[pull]
+	rebase = false
