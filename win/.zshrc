@@ -23,6 +23,10 @@ export DEFAULT_USER=$(whoami)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# for dotnet ef tool
+path+=~/.dotnet/tools
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
