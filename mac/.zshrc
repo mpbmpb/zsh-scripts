@@ -15,6 +15,7 @@ ZSH_DISABLE_COMPFIX=true
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta'
 ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=magenta'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bold,underline"
 
 # Set name of the theme to load 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -28,7 +29,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-z history-substring-search auto-color-ls zsh-syntax-highlighting)
+plugins=(git zsh-z history-substring-search colorize auto-color-ls zsh-syntax-highlighting)
 
 export ZSH=$HOME/.oh-my-zsh
 export DEFAULT_USER=$(whoami)
@@ -78,7 +79,7 @@ tree() {
 autoload zmv
 
 # use lf to switch directories
-alias lfcd='source ~/lfcd.sh'
+alias lfcd='source ~/zsh-scripts/lfcd.sh'
 bindkey -s '^o' 'lfcd\n'
 
 bindkey '/e[A' history-beginning-search-backward
