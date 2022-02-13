@@ -75,6 +75,8 @@ tree() {
   colorls -d --tree=$depth
 }
 
+clone() { git clone https://github.com/"$1" }
+
 #zmv
 autoload zmv
 
