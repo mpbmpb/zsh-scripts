@@ -135,6 +135,8 @@ tree() {
   colorls -d --tree=$depth
 }
 
+clone() { git clone https://github.com/"$1" }
+
 # use lf to switch directories
 alias lfcd='source ~/zsh-scripts/lfcd.sh'
 bindkey -s '^o' 'lfcd\n'

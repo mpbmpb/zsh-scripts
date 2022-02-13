@@ -1,9 +1,7 @@
-alias c='/mnt/c'
-alias c~='/mnt/c/Users/Admin'
-alias d='/mnt/d'
-alias cdp='/mnt/d/Projects'
-alias cdg='/mnt/d/Projects/git'
-alias dl='/mnt/d/downloads'
+alias c~='/mnt/c/Users/markk'
+alias cdp='/mnt/c/Projects'
+alias cdg='/mnt/c/Projects/git'
+alias dl='/mnt/c/Users/markk/Downloads'
 alias lx='colorls -A --sd'
 alias x='colorls --sd'
 alias code="/mnt/c/users/markk/AppData/Local/Programs/'Microsoft VS Code'/Code.exe"
