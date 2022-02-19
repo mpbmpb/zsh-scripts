@@ -1,4 +1,3 @@
-alias nano=/usr/local/Cellar/nano/5.7/bin/nano
 alias lx='colorls -A --sd'
 alias x='colorls --sd'
 alias cdp='~/Projects'
